@@ -8,7 +8,7 @@ $('#url').val(url);
 
 console.log(url);
 // Bind to the submit event of our form
-$("#orderform").submit(function(event){
+$("#orderform1,#orderform2").submit(function(event){
 
     // Abort any pending request
     if (request) {
@@ -30,7 +30,7 @@ $("#orderform").submit(function(event){
 
     // Fire off the request to /form.php
     request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbzcp7jJYFJCCVwRGDYEH93EuNqNbrB7ULL2XY2a4kxP9-axn9UJdj1N5krBYPUL0LLj/exec",
+        url: "https://script.google.com/macros/s/AKfycbzTna4_QSn",
         type: "post",
         data: serializedData
     });
@@ -59,7 +59,7 @@ $("#orderform").submit(function(event){
         // Reenable the inputs
         $inputs.prop("disabled", false);
         console.log("It's running");
-        window.location.href = 'thanks.html';
+        window.location.href = 'success.html';
     });
 
     // Prevent default posting of form
